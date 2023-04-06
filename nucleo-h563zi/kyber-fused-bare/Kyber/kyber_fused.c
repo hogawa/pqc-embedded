@@ -1396,12 +1396,11 @@ KYBERFUSE_STATIC void cmov(uint8_t *r, const uint8_t *x, size_t len, uint8_t b)
 *                (an already allocated array of KYBER_PUBLICKEYBYTES bytes)
 *              - uint8_t *sk: pointer to output private key
 *                (an already allocated array of KYBER_SECRETKEYBYTES bytes)
+*              - void (*f_rng)(uint8_t *, size_t): pointer to RNG function
 *
 * Returns 0 (success)
 **************************************************/
-int crypto_kem_keypair(uint8_t *pk,
-                       uint8_t *sk,
-					   void (*f_rng)(uint8_t *, size_t))
+int crypto_kem_keypair(uint8_t *pk, uint8_t *sk, void (*f_rng)(uint8_t *, size_t))
 {
   size_t i;
   indcpa_keypair(pk, sk, f_rng);
@@ -1409,7 +1408,8 @@ int crypto_kem_keypair(uint8_t *pk,
     sk[i+KYBER_INDCPA_SECRETKEYBYTES] = pk[i];
   hash_h(sk+KYBER_SECRETKEYBYTES-2*KYBER_SYMBYTES, pk, KYBER_PUBLICKEYBYTES);
   /* Value z for pseudo-random output on reject */
-//  randombytes(sk+KYBER_SECRETKEYBYTES-KYBER_SYMBYTES, KYBER_SYMBYTES);
+  // HSO: replaced by a pointer function to provide external RNG providers
+  //  randombytes(sk+KYBER_SECRETKEYBYTES-KYBER_SYMBYTES, KYBER_SYMBYTES);
   f_rng(sk+KYBER_SECRETKEYBYTES-KYBER_SYMBYTES, KYBER_SYMBYTES);
   return 0;
 }
@@ -1426,19 +1426,18 @@ int crypto_kem_keypair(uint8_t *pk,
 *                (an already allocated array of KYBER_SSBYTES bytes)
 *              - const uint8_t *pk: pointer to input public key
 *                (an already allocated array of KYBER_PUBLICKEYBYTES bytes)
+*              - void (*f_rng)(uint8_t *, size_t): pointer to RNG function
 *
 * Returns 0 (success)
 **************************************************/
-int crypto_kem_enc(uint8_t *ct,
-                   uint8_t *ss,
-                   const uint8_t *pk,
-				   void (*f_rng)(uint8_t *, size_t))
+int crypto_kem_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk, void (*f_rng)(uint8_t *, size_t))
 {
   uint8_t buf[2*KYBER_SYMBYTES];
   /* Will contain key, coins */
   uint8_t kr[2*KYBER_SYMBYTES];
 
-//  randombytes(buf, KYBER_SYMBYTES);
+  // HSO: replaced by a pointer function to provide external RNG providers
+  // randombytes(buf, KYBER_SYMBYTES);
   f_rng(buf, KYBER_SYMBYTES);
   /* Don't release system RNG output */
   hash_h(buf, buf, KYBER_SYMBYTES);
