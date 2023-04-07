@@ -52,3 +52,8 @@ Alice's shared secret (32 bytes) = 0x62123fc43f7bc33a124d8c6dd350ce2c8d1cdad966f
 
 [PASS] Alice and Bob's shared secrets match
 ```
+
+### Project status:
+
+- Compilation: :heavy_check_mark:
+- Testing: :heavy_check_mark:
