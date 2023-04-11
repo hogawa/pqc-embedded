@@ -1,0 +1,37 @@
+# Example projects from CubeMX
+Nx_Iperf/
+Nx_SNTP_Client/
+
+# Cube-IDE project files, metadata, and output files
+.metadata/
+.cproject
+.mxproject
+.project
+.settings/
+Debug/
+
+# Project-specific files
+nucleo-f429zi/mbedtls-expr/
+
+nucleo-f429zi/mbedtls-freertos-expr/Core/
+nucleo-f429zi/mbedtls-freertos-expr/Drivers/
+nucleo-f429zi/mbedtls-freertos-expr/LWIP/
+nucleo-f429zi/mbedtls-freertos-expr/MBEDTLS/App/mbedtls.c
+nucleo-f429zi/mbedtls-freertos-expr/MBEDTLS/App/mbedtls.h
+nucleo-f429zi/mbedtls-freertos-expr/MBEDTLS/App/net_sockets.c
+nucleo-f429zi/mbedtls-freertos-expr/MBEDTLS/Target/
+nucleo-f429zi/mbedtls-freertos-expr/Middlewares/
+nucleo-f429zi/mbedtls-freertos-expr/STM32F429ZITX_FLASH.ld
+nucleo-f429zi/mbedtls-freertos-expr/STM32F429ZITX_RAM.ld
+
+nucleo-h563zi/kyber-fused-bare/Core/Inc/
+nucleo-h563zi/kyber-fused-bare/Core/Src/stm32h5xx_hal_msp.c
+nucleo-h563zi/kyber-fused-bare/Core/Src/stm32h5xx_it.c
+nucleo-h563zi/kyber-fused-bare/Core/Src/syscalls.c
+nucleo-h563zi/kyber-fused-bare/Core/Src/sysmem.c
+nucleo-h563zi/kyber-fused-bare/Core/Src/system_stm32h5xx.c
+nucleo-h563zi/kyber-fused-bare/Core/Startup/
+nucleo-h563zi/kyber-fused-bare/Drivers/
+nucleo-h563zi/kyber-fused-bare/STM32H563ZITX_FLASH.ld
+nucleo-h563zi/kyber-fused-bare/STM32H563ZITX_RAM.ld
+nucleo-h563zi/kyber-fused-bare/kyber-fused-bare Debug.launch
