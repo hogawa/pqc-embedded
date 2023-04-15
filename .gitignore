@@ -35,3 +35,20 @@ nucleo-h563zi/kyber-fused-bare/Drivers/
 nucleo-h563zi/kyber-fused-bare/STM32H563ZITX_FLASH.ld
 nucleo-h563zi/kyber-fused-bare/STM32H563ZITX_RAM.ld
 nucleo-h563zi/kyber-fused-bare/kyber-fused-bare Debug.launch
+
+nucleo-h563zi/MOOC_5_ThreadX_lab/AZURE_RTOS/
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Inc/
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/main.c
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/stm32h5xx_hal_msp.c
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/stm32h5xx_hal_timebase_tim.c
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/stm32h5xx_it.c
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/syscalls.c
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/sysmem.c
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/system_stm32h5xx.c
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Src/tx_initialize_low_level.S
+nucleo-h563zi/MOOC_5_ThreadX_lab/Core/Startup/
+nucleo-h563zi/MOOC_5_ThreadX_lab/Drivers/
+nucleo-h563zi/MOOC_5_ThreadX_lab/MOOC_5_ThreadX_lab.launch
+nucleo-h563zi/MOOC_5_ThreadX_lab/Middlewares/
+nucleo-h563zi/MOOC_5_ThreadX_lab/STM32H563ZITX_FLASH.ld
+nucleo-h563zi/MOOC_5_ThreadX_lab/STM32H563ZITX_RAM.ld
