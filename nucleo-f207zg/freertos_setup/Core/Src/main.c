@@ -393,7 +393,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+    HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
     osDelay(1000);
   }
   /* USER CODE END 5 */
@@ -412,7 +412,7 @@ void StartTask02(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+    HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
     osDelay(1000);
   }
   /* USER CODE END StartTask02 */

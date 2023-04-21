@@ -102,14 +102,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	while (1) {
-    /* USER CODE END WHILE */
-	HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-	HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-	HAL_Delay(1000);
-    /* USER CODE BEGIN 3 */
-	}
+  while (1) {
+  /* USER CODE END WHILE */
+        HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+        HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+        HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+        HAL_Delay(1000);
+  /* USER CODE BEGIN 3 */
+  }
   /* USER CODE END 3 */
 }
 
