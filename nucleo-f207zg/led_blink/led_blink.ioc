@@ -2,11 +2,12 @@
 CAD.formats=
 CAD.pinconfig=
 CAD.provider=
-ETH.IPParameters=MediaInterface,PHY_Name,PHY_Value,PhyAddress
+ETH.IPParameters=MediaInterface,PHY_Name,PHY_Value,PhyAddress,RxMode
 ETH.MediaInterface=ETH_MEDIA_INTERFACE_RMII
 ETH.PHY_Name=LAN8742A_PHY_ADDRESS
 ETH.PHY_Value=0
 ETH.PhyAddress=0
+ETH.RxMode=ETH_RXPOLLING_MODE
 File.Version=6
 GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
