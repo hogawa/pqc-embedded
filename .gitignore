@@ -62,7 +62,6 @@ nucleo-f207zg/led_blink/Core/Src/sysmem.c
 nucleo-f207zg/led_blink/Core/Src/system_stm32f2xx.c
 nucleo-f207zg/led_blink/Core/Startup/
 nucleo-f207zg/led_blink/Drivers/
-nucleo-f207zg/led_blink/README.md
 nucleo-f207zg/led_blink/STM32F207ZGTX_FLASH.ld
 nucleo-f207zg/led_blink/STM32F207ZGTX_RAM.ld
 nucleo-f207zg/led_blink/led_blink.launch
