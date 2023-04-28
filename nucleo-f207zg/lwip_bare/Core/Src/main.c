@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+// HSO
+#include "tcp_client.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +49,7 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 /* USER CODE BEGIN PV */
 // HSO
 extern struct netif gnetif;
+extern bool timeFlag;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,6 +73,11 @@ void eth_conn_check(struct netif *netif) {
 	HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);
   }
+}
+
+int __io_putchar(int ch){
+  HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 0xFFFF);
+  return ch;
 }
 /* USER CODE END 0 */
 
@@ -115,9 +122,15 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	// HSO
-    MX_LWIP_Process();
     /* USER CODE BEGIN 3 */
+	// HSO
+	MX_LWIP_Process();
+#if 1
+	if (timeFlag) {
+	  timeFlag = false;
+	  app_start_get_time(); //get time information from the server
+	}
+#endif
   }
   /* USER CODE END 3 */
 }
