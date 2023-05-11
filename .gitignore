@@ -133,7 +133,9 @@ nucleo-f207zg/freertos_lwip_tcp/freertos_lwip_tcp.launch
 
 nucleo-f207zg/mbedtls_get_cfg/Core/
 nucleo-f207zg/mbedtls_get_cfg/Drivers/
-nucleo-f207zg/mbedtls_get_cfg/LWIP/
+nucleo-f207zg/mbedtls_get_cfg/LWIP/App/
+nucleo-f207zg/mbedtls_get_cfg/LWIP/Target/ethernetif.c
+nucleo-f207zg/mbedtls_get_cfg/LWIP/Target/ethernetif.h
 nucleo-f207zg/mbedtls_get_cfg/MBEDTLS/App/mbedtls.c
 nucleo-f207zg/mbedtls_get_cfg/MBEDTLS/App/mbedtls.h
 nucleo-f207zg/mbedtls_get_cfg/Middlewares/
